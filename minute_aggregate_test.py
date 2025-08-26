@@ -3,7 +3,7 @@ import requests
 import json
 from datetime import datetime, timezone, timedelta
 
-POLYGON_API_KEY = r"uOL9eSprjrGbjbbPC2qGEvvRTckJJ2y3"
+POLYGON_API_KEY = r"CENSORED"
 
 def fetch_minute_aggregates_between(ticker, api_key, start_time, end_time):
     """
@@ -38,15 +38,15 @@ def fetch_minute_aggregates_between(ticker, api_key, start_time, end_time):
 
     return response.json()
 
-# Example usage
 api_key = "your_polygon_api_key"
-ticker = "AAPL"  # Example ticker
+ticker = "AAPL"
 start_time = "2024-12-26T12:15:00"
 end_time = "2024-12-26T12:45:00"
 
 try:
     data = fetch_minute_aggregates_between(ticker, api_key, start_time, end_time)
-    # Pretty-print the JSON response
+
     print(json.dumps(data, indent=4))
 except Exception as e:
     print(f"An error occurred: {e}")
+
