@@ -16,7 +16,7 @@ def get_dates_in_range(start_date_str, end_date_str):
 
 def get_openclose(ticker, dates, dataframe, lock):
     for date in dates:
-        url = f"https://api.polygon.io/v1/open-close/{ticker}/{date}?adjusted=true&apiKey=uOL9eSprjrGbjbbPC2qGEvvRTckJJ2y3"
+        url = f"https://api.polygon.io/v1/open-close/{ticker}/{date}?adjusted=true&apiKey=CENSORED"
 
         try:
             response = requests.get(url)
@@ -81,6 +81,7 @@ def main(tickers, start_date, end_date, start_row=0):
 main(load_tickers_from_csv(r"Q:\Project_BOLT\Data_Formation_Scripts\Ticker_Classifications\tickers.csv", start_row=0), "20200101", "20241130")
 
 
-#response = requests.get("https://api.polygon.io/v1/open-close/META/2020-01-02?adjusted=true&apiKey=uOL9eSprjrGbjbbPC2qGEvvRTckJJ2y3")
+#response = requests.get("https://api.polygon.io/v1/open-close/META/2020-01-02?adjusted=true&apiKey=CENSORED")
 #print(response.status_code)
 #print(response.text)
+
